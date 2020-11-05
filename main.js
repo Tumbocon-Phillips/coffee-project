@@ -64,16 +64,20 @@ for (let roast of roastAnchors){
         if (this.getAttribute("data-roast") === "all"){
             // var tbody = document.querySelector('#coffees');
         //    display all
+            submitButton.addEventListener('click', updateCoffees);
         }
         else if (this.getAttribute("data-roast") === "light"){
-
+            submitButton.addEventListener('click', updateCoffees);
             //    display all
         }
         else if (this.getAttribute("data-roast") === "medium"){
             //    display all
+            submitButton.addEventListener('click', updateCoffees);
+
         }
         else if (this.getAttribute("data-roast") === "dark"){
             //    display all
+            submitButton.addEventListener('click', updateCoffees);
         }
     })
 }
