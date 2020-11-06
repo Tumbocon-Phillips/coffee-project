@@ -55,11 +55,9 @@
 <!--*******TABLE*******-->
 <table>
     <thead>
-    <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
+    <div>
+
+    </div>
     </thead>
     <tbody id="coffees"></tbody>
 </table>
@@ -73,24 +71,34 @@
     <div class="card-body">
         <h5 class="card-title">About</h5>
         <h5 class="card-title">Contact us</h5>
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
+<!--        <form>-->
+<!--            <label for="added-roast-selection"></label>-->
+<!--            <select id="added-roast-selection">-->
+<!--                <option>light</option>-->
+<!--                <option>medium</option>-->
+<!--                <option>dark</option>-->
+<!--            </select>-->
+<!--            &lt;!&ndash;        <input id="submit" type="submit" />&ndash;&gt;-->
+<!--            <label>-->
+<!--            <input id="added-roast-name" class="card-text" placeholder="">-->
+<!--            </label>-->
+<!--            <a href="#" type="submit" class="btn btn-primary">Add coffee!</a>-->
+<!--        </form>-->
+    </div>
+<!--*******FORM FOR ADD COFFEE********-->
+        <form id="frm1">
+            Select Roast:
+            <label for="added-roast-selection"></label>
+            <select id="added-roast-selection">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
-                <option>all</option>
-            </select>
-            <!--        <input id="submit" type="submit" />-->
+            </select><br>
+            Name of roast? <input type="text" id="added-roast-name" placeholder="Whats the flava!"><br><br>
+            <input id="submit" value="Submit">
         </form>
-        <label>
-            <input class="card-text" placeholder="">
-        </label>
-        <a href="#" class="btn btn-primary">Add coffee!</a>
-    </div>
-    <div class="card-footer text-muted">
-        2 days ago
-    </div>
+        <button onclick="myFunction()">Try it</button>
+
 </div>
 
 <!--*******END FOOTER*******-->

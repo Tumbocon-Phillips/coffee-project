@@ -1,10 +1,10 @@
 "use strict"
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h5>' + coffee.name + '</h5>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
     return html;
 }
 function renderCoffees(coffees) {
@@ -79,3 +79,29 @@ for (let roast of roastAnchors){
         updateCoffees();
     })
 }
+    function myFunction() {
+    var newCoffeeRoastType = "" + document.getElementById("added-roast-selection");
+        console.log(newCoffeeRoastType.value)
+    var newCoffee = "" + document.getElementById('added-roast-name');
+        console.log(newCoffee.value)
+    var newCoffeeID = coffees.length + 1
+        var addedCoffee = {
+         id: newCoffeeID,
+         name: newCoffee,
+         roast: newCoffeeRoastType,
+        }
+        coffees.push(addedCoffee);
+        updateCoffees();
+    }
+
+
+
+// function myFunction() {
+//     var x = document.getElementById("frm1");
+//     var text = "";
+//     var i;
+//     for (i = 0; i < x.length ;i++) {
+//         text += x.elements[i].value + "<br>";
+//     }
+//     console.log(text)
+// }
