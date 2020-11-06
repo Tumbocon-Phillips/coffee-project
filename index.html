@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <!--***********NAV BAR*******************-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,46 +47,77 @@
         </form>
     </div>
 </nav>
+
 <!--***********END  NAV BAR*******************-->
+
+<!--*******JUMBOTRON*******-->
+
+<div id="carousel-size" class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/coffee-2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/coffee-2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/coffee-2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!--*******END JUMBOTRON*******-->
+
 <!--*******HEADER*******-->
 <header>
-    <h1>Coffee!</h1>
+    <h1>Our available Coffee!</h1>
 </header>
-<!--*******END HEADER*******-->
-<!--*******TABLE*******-->
-<table>
-    <thead>
-    <div>
 
-    </div>
-    </thead>
-    <tbody id="coffees"></tbody>
-</table>
-<!--*******END TABLE*******-->
+<!--*******END HEADER*******-->
+
+<!--*******COFFE CARDS*******-->
+
+<div id="coffees" class="container row">
+</div>
+
+<!--*******COFFEE CARDS*******-->
+
 <!--*******START FOOTER*******-->
 
-<div class="card text-center">
-    <div class="card-header">
-        Featured
-    </div>
-    <div class="card-body">
+<div id="footer" class="card row ">
+    <div class="card-body col-3 ">
         <h5 class="card-title">About</h5>
         <h5 class="card-title">Contact us</h5>
-<!--        <form>-->
-<!--            <label for="added-roast-selection"></label>-->
-<!--            <select id="added-roast-selection">-->
-<!--                <option>light</option>-->
-<!--                <option>medium</option>-->
-<!--                <option>dark</option>-->
-<!--            </select>-->
-<!--            &lt;!&ndash;        <input id="submit" type="submit" />&ndash;&gt;-->
-<!--            <label>-->
-<!--            <input id="added-roast-name" class="card-text" placeholder="">-->
-<!--            </label>-->
-<!--            <a href="#" type="submit" class="btn btn-primary">Add coffee!</a>-->
-<!--        </form>-->
     </div>
-<!--*******FORM FOR ADD COFFEE********-->
+
+    <!--*******FORM FOR ADD COFFEE********-->
         <form id="frm1">
             Select Roast:
             <label for="added-roast-selection"></label>
@@ -96,11 +128,26 @@
             </select><br>
             Name of roast? <input type="text" id="added-roast-name" placeholder="Whats the flava!"><br><br>
         </form>
-        <button id="submit" onclick="myFunction()">Add ya flava!</button>
-
+    <button id="submit" onclick="myFunction()">Add ya flava!</button>
 </div>
 
 <!--*******END FOOTER*******-->
+
+    <!--*******USED FOR TRANSFER OF HTML CODE TO JS ********-->
+<!--    <div class="flip-box">-->
+<!--        <div class="flip-box-inner">-->
+<!--            <div class="flip-box-front">-->
+<!--                <img src="img/coffee-2.jpeg" alt="Paris" style="width:300px;height:200px">-->
+<!--            </div>-->
+<!--            <div class="flip-box-back">-->
+<!--                <h2>Paris</h2>-->
+<!--                <p>What an amazing city</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!--*******END TRANSFER OF HTML CODE TO JS ********-->
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

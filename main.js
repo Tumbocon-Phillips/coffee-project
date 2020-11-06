@@ -1,11 +1,32 @@
 "use strict"
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
+    var html = '<div class="coffee flip-box col-4 ">';
+    html += '<div class="flip-box-inner">';
+    html += '<div class="flip-box-front">';
+    html += '<img src="img/coffee-2.jpeg" alt="Paris" class ="w-100">';
+    html += '</div>';
+    html += '<div class="flip-box-back">';
     html += '<h5>' + coffee.name + '</h5>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
+    html += '</div>';
+    html += '</div>';
     return html;
+
+    //JUSTINS FAST CODE
+
+    // var html = ' <div class="flip-box">\n' +
+    //     '        <div class="flip-box-inner">\n' +
+    //     '            <div class="flip-box-front">\n' +
+    //     '                <img src="img/coffee-2.jpeg" alt="Paris" style="width:300px;height:200px">\n' +
+    //     '            </div>\n' +
+    //     '            <div class="flip-box-back">\n' +
+    //     '                <h2>Paris</h2>\n' +
+    //     '                <p>What an amazing city</p>\n' +
+    //     '            </div>\n' +
+    //     '        </div>\n' +
+    //     '    </div>';
+
 }
 function renderCoffees(coffees) {
     var html = '';
