@@ -80,9 +80,9 @@ for (let roast of roastAnchors){
     })
 }
     function myFunction() {
-    var newCoffeeRoastType = "" + document.getElementById("added-roast-selection");
+    var newCoffeeRoastType = document.getElementById("added-roast-selection").value;
         console.log(newCoffeeRoastType.value)
-    var newCoffee = "" + document.getElementById('added-roast-name');
+    var newCoffee = document.getElementById('added-roast-name').value;
         console.log(newCoffee.value)
     var newCoffeeID = coffees.length + 1
         var addedCoffee = {
@@ -91,6 +91,7 @@ for (let roast of roastAnchors){
          roast: newCoffeeRoastType,
         }
         coffees.push(addedCoffee);
+        // renderCoffee();
         updateCoffees();
     }
 
