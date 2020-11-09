@@ -117,6 +117,23 @@ for (let roast of roastAnchors){
     }
 
 
+    var coffee_search = document.querySelector('#searchbar');
+    coffee_search.addEventListener('keyup',search_coffees)
+
+function search_coffees() {
+    console.log("TEST")
+    var searched_coffees = [];
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementById('coffees');
+    for (let i = 0; i < coffees.length; i++) {
+        if (coffees[i].name.toLowerCase().includes(input)) {
+            searched_coffees.push(coffees[i])
+        }
+    }
+    tbody.innerHTML = renderCoffees(searched_coffees);
+}
+
 
 // function myFunction() {
 //     var x = document.getElementById("frm1");
