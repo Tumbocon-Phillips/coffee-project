@@ -1,9 +1,28 @@
 "use strict"
+var coffeeArray = [
+    "coffee.flip1.jpeg",
+    "coffee.flip2.jpeg",
+    "coffee.flip3.jpeg",
+    "coffee.flip4.jpeg",
+    "coffee.flip5.jpeg",
+    "coffee.flip6.jpeg",
+    "coffee.flip7.jpeg",
+    "coffee.flip8.jpeg",
+    "coffee.flip9.jpeg",
+    "coffee.flip10.jpeg",
+    "coffee.flip11.jpeg",
+    "coffee.flip12.jpeg",
+    "coffee.flip13.jpeg",
+    "coffee.flip14.jpeg",
+    "coffee.flip15.jpeg",
+    "coffee.flip16.jpeg",
+]
+var globalCoffeeImageCounter = 0;
 function renderCoffee(coffee) {
     var html = '<div class="coffee flip-box col-4 ">';
     html += '<div class="flip-box-inner">';
     html += '<div class="flip-box-front">';
-    html += '<img src="img/coffee-2.jpeg" alt="Paris" class ="w-100">';
+    html += '<img src="img/' + coffeeArray[globalCoffeeImageCounter] + '" alt="coffee grounds" class ="w-100">';
     html += '</div>';
     html += '<div class="flip-box-back">';
     html += '<h5>' + coffee.name + '</h5>';
@@ -11,7 +30,15 @@ function renderCoffee(coffee) {
     html += '</div>';
     html += '</div>';
     html += '</div>';
+    globalCoffeeImageCounter += 1;
     return html;
+    // array of images 0-13
+    //function gives random number 0-13
+    //another function return the image from the array of images
+    // Math.floor(Math.random() * 13) + 1
+    // function getRandImg(){
+    //     Math.floor(Math.random() * 16) + 1
+    // }
 
     //JUSTINS FAST CODE
 
