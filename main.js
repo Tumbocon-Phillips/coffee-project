@@ -14,8 +14,15 @@ var coffeeArray = [
     "coffee.flip12.jpeg",
     "coffee.flip13.jpeg",
     "coffee.flip14.jpeg",
+    "coffee.flip16.jpeg",
     "coffee.flip15.jpeg",
     "coffee.flip16.jpeg",
+    "coffee.flip17.jpeg",
+    "coffee.flip18.jpeg",
+    "coffee.flip19.jpeg",
+    "coffee.flip20.jpeg",
+    "coffee.flip21.jpeg",
+    "coffee.flip22.jpeg"
 ]
 var globalCoffeeImageCounter = 0;
 function renderCoffee(coffee) {
@@ -27,10 +34,14 @@ function renderCoffee(coffee) {
     html += '<div class="flip-box-back">';
     html += '<h5>' + coffee.name + '</h5>';
     html += '<p>' + coffee.roast + '</p>';
+    html += '<p>' + 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid atque cum dolorem dolorum,  temporibus totam veniam veritatis voluptatibus?' + '</p>';
     html += '</div>';
     html += '</div>';
     html += '</div>';
     globalCoffeeImageCounter += 1;
+    if (globalCoffeeImageCounter > coffees.length){
+        globalCoffeeImageCounter = 0;
+    }
     return html;
     // array of images 0-13
     //function gives random number 0-13
@@ -93,6 +104,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+coffees = coffees.reverse();
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -129,9 +141,9 @@ for (let roast of roastAnchors){
 }
     function myFunction() {
     var newCoffeeRoastType = document.getElementById("added-roast-selection").value;
-        console.log(newCoffeeRoastType.value)
+        console.log(document.getElementById("added-roast-selection").value)
     var newCoffee = document.getElementById('added-roast-name').value;
-        console.log(newCoffee.value)
+        console.log(document.getElementById('added-roast-name').value);
     var newCoffeeID = coffees.length + 1
         var addedCoffee = {
          id: newCoffeeID,
