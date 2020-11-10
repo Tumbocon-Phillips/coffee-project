@@ -140,10 +140,10 @@ for (let roast of roastAnchors){
     })
 }
     function myFunction() {
-    var newCoffeeRoastType = document.getElementById("added-roast-selection").value;
-        console.log(document.getElementById("added-roast-selection").value)
-    var newCoffee = document.getElementById('added-roast-name').value;
-        console.log(document.getElementById('added-roast-name').value);
+    var newCoffeeRoastType = document.getElementById("added-roast-selection colorbrown").value;
+        console.log(document.getElementById("added-roast-selection colorbrown").value)
+    var newCoffee = document.getElementById('added-roast-name colorbrown').value;
+        console.log(document.getElementById('added-roast-name colorbrown').value);
     var newCoffeeID = coffees.length + 1
         var addedCoffee = {
          id: newCoffeeID,
